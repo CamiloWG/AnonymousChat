@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" class="">
+    <link rel="stylesheet" href="bootstrap.css">
+    <title>Anonymous Chat</title>
+</head>
+<body>
+    
+    <div class="noti-container">
+        <div class="alert alert-dismissible alert-warning">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <h4 class="alert-heading">Anonymous Chat</h4>
+            <p class="mb-0">Está es una versión Beta de <a href="#">Anonymous Chat</a></p>
+        </div>
+    </div>
+    <div class="chat-container">
+        <div class="card text-white bg-secondary mb-3">
+            <div class="card-header">Chat Global</div>
+            <div class="card-body">
+                <h4 class="card-title">Chatea con anónimos</h4>
+                <div class="main-chat">
+                    <div class="chat-output-container" id="output">
+                        <div class="user-actions"><b id="actions"></b></div>
+                    </div>
+                    
+                    <div class="chat-window">
+                        <div class="chat-form">
+                            <div class="chat-form-text">
+                                <form id="chat-form">
+                                    <input type="text" class="form-control" id="message" placeholder="Escibe aquí tu mensaje!">
+                                    <button type="button" id="btnSend" class="btn btn-outline-success">Enviar!</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
